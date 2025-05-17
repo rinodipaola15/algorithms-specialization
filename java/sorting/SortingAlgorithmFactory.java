@@ -6,14 +6,14 @@ public class SortingAlgorithmFactory {
     private static final Map<String, Supplier<SortingAlgorithm>> sortingAlgorithms = new HashMap<>();
 
     static {
-        sortingAlgorithms.put("MERGE SORT", MergeSort::new);
+        sortingAlgorithms.put("MergeSort", MergeSort::new);
         //...
         //... Add other sorting algorithms here
         //...
     }
 
     public static SortingAlgorithm getAlgorithm(String name) {
-        Supplier<SortingAlgorithm> supplier = sortingAlgorithms.get(name.toUpperCase());
+        Supplier<SortingAlgorithm> supplier = sortingAlgorithms.get(name);
         return (supplier != null) ? supplier.get() : null;
     }
 }
