@@ -44,9 +44,20 @@ java/
 Open the repository folder in **Visual Studio Code** and:
 
 1. Open the specific `Main` class file you want to run (e.g., `MainSorting.java` for sorting algorithms).
-2. Use the built-in Java debugger or terminal to compile and run that `Main` class.
-3. Modify or add test cases directly inside the chosen `Main` class.
+2. At the top of `MainSorting.java`, you'll find:
 
+   ```java
+   private static final String SORTING_ALGORITHM = "MergeSort";
+   ```
+
+   Replace "MergeSort" with the name of the algorithm class you want to run, for example:
+
+   ```java
+   private static final String SORTING_ALGORITHM = "QuickSort";
+   ```
+
+4. Use the Java terminal or debugger to compile and run the selected file.
+   
 ---
 
 ## 📖 Algorithms Covered
