@@ -1,6 +1,6 @@
 # Algorithms Specialization
 
-This repository contains Java implementations of algorithms covered in the [Algorithms Specialization](https://www.coursera.org/specializations/algorithms) by **Tim Roughgarden** (Stanford University) on Coursera.
+This repository contains Java implementations of algorithms covered in the [Algorithms Specialization](https://www.coursera.org/specializations/algorithms) by **Tim Roughgarden (Stanford University)** on Coursera.
 
 Each folder contains algorithms grouped by category, following the structure of the course.
 
