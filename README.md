@@ -23,14 +23,13 @@ Each folder contains algorithms grouped by category, following the structure of 
 java/
 ├── sorting/
 │ ├── MergeSort.java
-│ ├── QuickSort.java
+│ ├── ...
 │ └── MainSorting.java
 ├── graphs/
-│ ├── DFS.java
-│ ├── BFS.java
+│ ├── ...
 │ └── MainGraphs.java
 ├── dynamic_programming/
-│ ├── Knapsack.java
+│ ├── ...
 │ └── MainDP.java
 ```
 
