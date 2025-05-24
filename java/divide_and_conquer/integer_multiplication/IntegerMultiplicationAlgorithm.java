@@ -1,3 +1,6 @@
+
+import java.math.BigInteger;
+
 public abstract class IntegerMultiplicationAlgorithm {
     protected String name;
 
@@ -10,5 +13,5 @@ public abstract class IntegerMultiplicationAlgorithm {
         return name;
     }
 
-    public abstract int multiply(int x, int y);
+    public abstract BigInteger multiply(BigInteger x, BigInteger y);
 }
