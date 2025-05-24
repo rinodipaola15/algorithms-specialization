@@ -9,11 +9,11 @@ Each folder contains algorithms grouped by category, following the structure of 
 ## 📘 Topics Covered
 
 - Divide and Conquer
-- Sorting and Searching
 - Graph Algorithms
 - Greedy Algorithms
 - Dynamic Programming
 - NP-Completeness
+Divide and Conquer
 
 ---
 
@@ -21,16 +21,22 @@ Each folder contains algorithms grouped by category, following the structure of 
 
 ```
 java/
-├── sorting/
-│ ├── MergeSort.java
-│ ├── ...
-│ └── MainSorting.java
-├── graphs/
-│ ├── ...
-│ └── MainGraphs.java
+├── divide_and_conquer/
+│   ├── sorting/
+│   │   ├── MergeSort.java
+│   │   └── MainSorting.java
+│   ├── integer_multiplication/
+│   │   ├── Karatsuba.java
+│   └── MainIntegerMultiplication.java
 ├── dynamic_programming/
-│ ├── ...
-│ └── MainDP.java
+│   ├── ...
+│   ├── ...
+│   └── MainDP.java
+├── graphs/
+│   ├── ...
+│   ├── ...
+│   ├── ...
+│   └── MainGraphs.java
 ```
 
 
@@ -49,21 +55,33 @@ Open the repository folder in **Visual Studio Code** and:
    private static final String SORTING_ALGORITHM = "MergeSort";
    ```
 
-   Replace "MergeSort" with the name of the algorithm class you want to run, for example:
-
-   ```java
-   private static final String SORTING_ALGORITHM = "QuickSort";
-   ```
+   Replace "MergeSort" with the name of the algorithm class you want to run.
 
 4. Use the Java terminal or debugger to compile and run the selected file.
-   
+
 ---
 
-## 📖 Algorithms Covered
+## 📖 Algorithms Implemented
 
-- **Sorting:** Merge Sort, Quick Sort, etc.
-- **Graphs:** Depth-First Search (DFS), Breadth-First Search (BFS), etc.
-- **Dynamic Programming:** Knapsack Problem, etc.
+### 🧠 Divide and Conquer
+
+#### 📊 Sorting
+- Merge Sort  
+
+#### 🧮 Integer Multiplication
+- Karatsuba  
+
+---
+
+### 🧵 Dynamic Programming
+
+- ...
+
+---
+
+### 🌐 Graph Algorithms
+
+- ...
 
 ---
 
