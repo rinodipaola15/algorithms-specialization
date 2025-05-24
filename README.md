@@ -27,16 +27,8 @@ java/
 │   │   └── MainSorting.java
 │   ├── integer_multiplication/
 │   │   ├── Karatsuba.java
-│   └── MainIntegerMultiplication.java
-├── dynamic_programming/
-│   ├── ...
-│   ├── ...
-│   └── MainDP.java
-├── graphs/
-│   ├── ...
-│   ├── ...
-│   ├── ...
-│   └── MainGraphs.java
+│   │   └── MainIntegerMultiplication.java
+
 ```
 
 
