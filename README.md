@@ -27,7 +27,8 @@ java/
 │   │   └── MainSorting.java
 │   ├── sorting_and_inversion_count/
 │   │   ├── MergeSortAndCount.java
-│   │   └── MainSortingAndInversionCount.java
+│   │   ├── MainSortingAndInversionCount.java
+│   │   └── MainSortingAndInversionCountFromFile.java
 │   ├── integer_multiplication/
 │   │   ├── Karatsuba.java
 │   │   └── MainIntegerMultiplication.java
