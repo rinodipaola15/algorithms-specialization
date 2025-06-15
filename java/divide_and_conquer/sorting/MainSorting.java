@@ -1,6 +1,6 @@
 public class MainSorting
 {
-    private static final String SORTING_ALGORITHM = "MergeSort";
+    private static final String SORTING_ALGORITHM = "QuickSort";
 
 	public static void main(String[] args) {
 

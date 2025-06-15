@@ -24,11 +24,15 @@ java/
 ├── divide_and_conquer/
 │   ├── sorting/
 │   │   ├── MergeSort.java
+│   │   ├── QuickSort.java
 │   │   └── MainSorting.java
 │   ├── sorting_and_inversion_count/
 │   │   ├── MergeSortAndCount.java
 │   │   ├── MainSortingAndInversionCount.java
 │   │   └── MainSortingAndInversionCountFromFile.java
+│   ├── sorting_and_comparison_count/
+│   │   ├── QuickSortCounter.java
+│   │   └── QuickSortCounterMain.java
 │   ├── integer_multiplication/
 │   │   ├── Karatsuba.java
 │   │   └── MainIntegerMultiplication.java

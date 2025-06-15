@@ -8,8 +8,6 @@ public class MainSortingAndInversionCountFromFile {
     private static final String INPUT_FILE_PATH = "./java/divide_and_conquer/sorting_and_inversion_count/array.txt";
 
     public static void main(String[] args) {
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
-
         // Read the array from the input file
         int[] inputArray = readArrayFromFile(INPUT_FILE_PATH);
         if (inputArray == null) {

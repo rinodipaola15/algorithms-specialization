@@ -7,6 +7,7 @@ public class SortingAlgorithmFactory {
 
     static {
         sortingAlgorithms.put("MergeSort", MergeSort::new);
+        sortingAlgorithms.put("QuickSort", QuickSort::new);
         //...
         //... Add other sorting algorithms here
         //...
