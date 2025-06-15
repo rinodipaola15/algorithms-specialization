@@ -67,9 +67,13 @@ Open the repository folder in **Visual Studio Code** and:
 
 #### 📊 Sorting
 - Merge Sort
+- Quick Sort
 
 #### 🔄 Inversion Counting
 - Merge Sort with Inversion Counting
+
+#### 🔄 Comparison Counting
+- Quick Sort with Comparison Counting
 
 #### 🧮 Integer Multiplication
 - Karatsuba  
