@@ -36,6 +36,13 @@ java/
 │   ├── integer_multiplication/
 │   │   ├── Karatsuba.java
 │   │   └── MainIntegerMultiplication.java
+│   ├── selection/
+│   │   ├── RandomizedSelection.java
+│   │   └── MainSelection.java
+├── graph_algorithms/
+│   ├── min_cut/
+│   │   ├── RandomizedContraction.java
+│   │   └── MainMinCut.java
 
 ```
 
@@ -49,7 +56,7 @@ java/
 Open the repository folder in **Visual Studio Code** and:
 
 1. Open the specific `Main` class file you want to run (e.g., `MainSorting.java` for sorting algorithms).
-2. At the top of `MainSorting.java`, you'll find:
+2. At the top of `MainSorting.java`, you'll typically find a configuration like:
 
    ```java
    private static final String SORTING_ALGORITHM = "MergeSort";
@@ -78,17 +85,15 @@ Open the repository folder in **Visual Studio Code** and:
 #### 🧮 Integer Multiplication
 - Karatsuba  
 
----
-
-### 🧵 Dynamic Programming
-
-- ...
+#### 🔍 Selection
+- Randomized Selection (RSelect)
 
 ---
 
 ### 🌐 Graph Algorithms
 
-- ...
+#### ✂️ Minimum Cut
+- Karger’s Randomized Contraction Algorithm
 
 ---
 
