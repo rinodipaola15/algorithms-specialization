@@ -2,7 +2,7 @@ import java.util.*;
 
 /**
  * Kosaraju's Two-Pass Algorithm for finding Strongly Connected Components (SCCs).
- * Works on directed graphs.
+ * Uses iterative DFS to avoid StackOverflow on large graphs.
  */
 public class DFSSCC extends GraphSearchAlgorithm {
     private Set<Integer> explored;
@@ -24,7 +24,7 @@ public class DFSSCC extends GraphSearchAlgorithm {
      */
     @Override
     public void run(Graph graph, int startNode) {
-        // First pass: run DFS-Loop on reversed graph to compute finishing times
+        // First pass: run DFS on reversed graph to compute finishing times
         Graph reversed = reverseGraph(graph);
         finishingTimes = new HashMap<>();
         explored = new HashSet<>();
@@ -36,12 +36,11 @@ public class DFSSCC extends GraphSearchAlgorithm {
 
         for (int node : nodes) {
             if (!explored.contains(node)) {
-                dfsLoopFirstPass(reversed, node);
+                dfsLoopFirstPassIterative(reversed, node);
             }
         }
 
-        // Second pass: run DFS-Loop on original graph in order of decreasing finishing times
-        // Build order list sorted by finishing times descending
+        // Second pass: run DFS on original graph in order of decreasing finishing times
         List<Map.Entry<Integer, Integer>> order = new ArrayList<>(finishingTimes.entrySet());
         order.sort(Map.Entry.<Integer, Integer>comparingByValue(Comparator.reverseOrder()));
 
@@ -52,34 +51,67 @@ public class DFSSCC extends GraphSearchAlgorithm {
             int node = entry.getKey();
             if (!explored.contains(node)) {
                 currentLeader = node;
-                dfsLoopSecondPass(graph, node);
+                dfsLoopSecondPassIterative(graph, node);
             }
         }
     }
 
     /**
-     * DFS for first pass (on reversed graph), computes finishing times.
+     * Iterative DFS for first pass on reversed graph,
+     * computes finishing times.
      */
-    private void dfsLoopFirstPass(Graph graph, int node) {
-        explored.add(node);
-        for (int neighbor : graph.getAdj(node)) {
-            if (!explored.contains(neighbor)) {
-                dfsLoopFirstPass(graph, neighbor);
+    private void dfsLoopFirstPassIterative(Graph graph, int startNode) {
+        Stack<Integer> stack = new Stack<>();
+        Set<Integer> tempVisited = new HashSet<>();
+
+        stack.push(startNode);
+
+        while (!stack.isEmpty()) {
+            int node = stack.peek();
+
+            if (!explored.contains(node)) {
+                explored.add(node);
+                tempVisited.add(node);
+            }
+
+            boolean allNeighborsExplored = true;
+            for (int neighbor : graph.getAdj(node)) {
+                if (!explored.contains(neighbor)) {
+                    stack.push(neighbor);
+                    allNeighborsExplored = false;
+                    break;
+                }
+            }
+
+            if (allNeighborsExplored) {
+                stack.pop();
+                if (tempVisited.contains(node)) {
+                    finishingTime++;
+                    finishingTimes.put(node, finishingTime);
+                    tempVisited.remove(node);
+                }
             }
         }
-        finishingTime++;
-        finishingTimes.put(node, finishingTime);
     }
 
     /**
-     * DFS for second pass (on original graph), assigns leaders to nodes.
+     * Iterative DFS for second pass on original graph,
+     * assigns leaders.
      */
-    private void dfsLoopSecondPass(Graph graph, int node) {
-        explored.add(node);
-        leaders.put(node, currentLeader);
-        for (int neighbor : graph.getAdj(node)) {
-            if (!explored.contains(neighbor)) {
-                dfsLoopSecondPass(graph, neighbor);
+    private void dfsLoopSecondPassIterative(Graph graph, int startNode) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(startNode);
+        explored.add(startNode);
+
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            leaders.put(node, currentLeader);
+
+            for (int neighbor : graph.getAdj(node)) {
+                if (!explored.contains(neighbor)) {
+                    explored.add(neighbor);
+                    stack.push(neighbor);
+                }
             }
         }
     }
@@ -88,7 +120,7 @@ public class DFSSCC extends GraphSearchAlgorithm {
      * Utility to reverse all edges of the graph.
      */
     private Graph reverseGraph(Graph graph) {
-        Graph reversed = new Graph();
+        Graph reversed = new DirectedGraph(); // assicurati che DirectedGraph sia usato
         for (int node : graph.getAllNodes()) {
             for (int neighbor : graph.getAdj(node)) {
                 reversed.addEdge(neighbor, node);
@@ -97,12 +129,8 @@ public class DFSSCC extends GraphSearchAlgorithm {
         return reversed;
     }
 
-    /**
-     * Prints the SCC results (leader -> list of nodes).
-     */
     @Override
     public void printResults() {
-        // Group nodes by leader to show SCCs
         Map<Integer, List<Integer>> sccGroups = new HashMap<>();
         for (Map.Entry<Integer, Integer> entry : leaders.entrySet()) {
             int node = entry.getKey();
@@ -114,13 +142,10 @@ public class DFSSCC extends GraphSearchAlgorithm {
         int sccCount = 0;
         for (List<Integer> group : sccGroups.values()) {
             sccCount++;
-            System.out.println("SCC " + sccCount + ": " + group);
+            System.out.println("SCC " + sccCount + ": " + group.size() + " nodes");
         }
     }
 
-    /**
-     * Returns the leader map (node -> leader).
-     */
     public Map<Integer, Integer> getLeaders() {
         return leaders;
     }

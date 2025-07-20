@@ -3,6 +3,7 @@ import java.util.*;
 /**
  * DFS for Topological Sorting.
  * Assumes the graph is a Directed Acyclic Graph (DAG).
+ * This version uses iterative DFS to avoid stack overflow.
  */
 public class DFSTopologicalSort extends GraphSearchAlgorithm {
     private final Set<Integer> explored = new HashSet<>();
@@ -27,25 +28,43 @@ public class DFSTopologicalSort extends GraphSearchAlgorithm {
 
         for (int node : graph.getAllNodes()) {
             if (!explored.contains(node)) {
-                dfs(graph, node);
+                dfsIterative(graph, node);
             }
         }
     }
 
     /**
-     * Recursive DFS that computes finishing times.
+     * Iterative DFS that computes finishing times.
      */
-    private void dfs(Graph graph, int node) {
-        explored.add(node);
+    private void dfsIterative(Graph graph, int startNode) {
+        Stack<Integer> stack = new Stack<>();
+        Set<Integer> visitedInStack = new HashSet<>();
+        stack.push(startNode);
 
-        for (int neighbor : graph.getAdj(node)) {
-            if (!explored.contains(neighbor)) {
-                dfs(graph, neighbor);
+        while (!stack.isEmpty()) {
+            int node = stack.peek();
+
+            if (!explored.contains(node)) {
+                explored.add(node);
+            }
+
+            boolean allNeighborsExplored = true;
+            for (int neighbor : graph.getAdj(node)) {
+                if (!explored.contains(neighbor)) {
+                    stack.push(neighbor);
+                    allNeighborsExplored = false;
+                    break;
+                }
+            }
+
+            if (allNeighborsExplored) {
+                stack.pop();
+                if (!finishingTimes.containsKey(node)) {
+                    finishingTimes.put(node, currentLabel);
+                    currentLabel--;
+                }
             }
         }
-
-        finishingTimes.put(node, currentLabel);
-        currentLabel--;
     }
 
     /**
@@ -54,7 +73,6 @@ public class DFSTopologicalSort extends GraphSearchAlgorithm {
     @Override
     public void printResults() {
         System.out.println("Topological order (node : finishing time):");
-        // Sorting nodes by finishing times descending
         finishingTimes.entrySet().stream()
             .sorted(Map.Entry.<Integer, Integer>comparingByValue(Comparator.reverseOrder()))
             .forEach(entry -> System.out.println("Node " + entry.getKey() + " : " + entry.getValue()));
