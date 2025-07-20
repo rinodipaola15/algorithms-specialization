@@ -10,10 +10,6 @@ Each folder contains algorithms grouped by category, following the structure of 
 
 - Divide and Conquer
 - Graph Algorithms
-- Greedy Algorithms
-- Dynamic Programming
-- NP-Completeness
-Divide and Conquer
 
 ---
 
@@ -43,6 +39,17 @@ java/
 │   ├── min_cut/
 │   │   ├── RandomizedContraction.java
 │   │   └── MainMinCut.java
+│   ├── search/
+│   │   ├── BFS.java
+│   │   ├── BFSConnectedComponents.java
+│   │   ├── BFSShortestPaths.java
+│   │   ├── DFS.java
+│   │   ├── DFSTopologicalSort.java
+│   │   ├── DFSSCC.java
+│   │   ├── Graph.java
+│   │   ├── GraphSearchAlgorithm.java
+│   │   ├── GraphSearchAlgorithmFactory.java
+│   │   └── MainSearch.java
 
 ```
 
@@ -94,6 +101,14 @@ Open the repository folder in **Visual Studio Code** and:
 
 #### ✂️ Minimum Cut
 - Karger’s Randomized Contraction Algorithm
+
+#### 🔍 Search
+- BFS (Breadth-First Search)
+- BFS Connected Components
+- BFS Shortest Paths
+- DFS (Depth-First Search)
+- DFS Topological Sort
+- DFS Strongly Connected Components (Kosaraju’s Algorithm)
 
 ---
 
