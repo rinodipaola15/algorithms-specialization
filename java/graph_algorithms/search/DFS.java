@@ -26,7 +26,7 @@ public class DFS extends GraphSearchAlgorithm {
         stack.push(startNode);
 
         while (!stack.isEmpty()) {
-            int current = stack.pop();
+            int current = stack.pop(); // Returns the element at the top of the stack (i.e., the last one inserted) and removes it from the stack
 
             if (!explored.contains(current)) {
                 explored.add(current);

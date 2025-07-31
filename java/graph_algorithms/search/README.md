@@ -32,6 +32,18 @@ This folder contains implementations of fundamental graph search algorithms, inc
   2. DFS on original graph in decreasing order of finishing times to discover SCCs.
 - **Use case:** Identifying clusters of nodes mutually reachable in directed graphs.
 
+### Dijkstra Standard
+- **Description:** Classic Dijkstra's algorithm using linear search to find the node with the minimum distance.
+- **How it works:** Iteratively selects the unvisited node with the smallest known distance, then relaxes its neighbors.
+- **Time Complexity:** O(V²)
+- **Use case:** Suitable for dense graphs or educational purposes where simplicity is preferred.
+
+### Dijkstra Heap
+- **Description:** Optimized Dijkstra's algorithm using a priority queue (min-heap) for faster node selection.
+- **How it works:** Uses a heap to efficiently select the node with the smallest distance; supports fast updates during relaxation.
+- **Time Complexity:** O((V + E) log V)
+- **Use case:** Preferred for sparse graphs or large datasets where performance matters.
+
 ## 🚀 How to Run
 
 Use the `MainSearch.java` file. Change the `SEARCH_ALGORITHM` constant to the algorithm you want to test, e.g.:

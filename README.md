@@ -50,6 +50,13 @@ java/
 │   │   ├── GraphSearchAlgorithm.java
 │   │   ├── GraphSearchAlgorithmFactory.java
 │   │   └── MainSearch.java
+│   │   └── dijkstra/
+│   │       ├── DijkstraStandard.java
+│   │       ├── DijkstraHeap.java
+│   │       ├── Edge.java
+│   │       ├── GraphWeighted.java
+│   │       ├── GraphWeightedSearchAlgorithm.java
+│   │       └── MainSearchFromFile.java
 
 ```
 
@@ -109,6 +116,7 @@ Open the repository folder in **Visual Studio Code** and:
 - DFS (Depth-First Search)
 - DFS Topological Sort
 - DFS Strongly Connected Components (Kosaraju’s Algorithm)
+- Dijkstra (linear implementation, heap-based implementation)
 
 ---
 

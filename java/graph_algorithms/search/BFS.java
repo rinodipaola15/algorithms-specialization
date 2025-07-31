@@ -5,6 +5,8 @@ import java.util.*;
  * Visits all nodes reachable from a start node in breadth-first order,
  * marking them as explored.
  */
+
+
 public class BFS extends GraphSearchAlgorithm {
     private final Set<Integer> explored = new HashSet<>();
 
@@ -27,7 +29,7 @@ public class BFS extends GraphSearchAlgorithm {
         queue.add(startNode);
 
         while (!queue.isEmpty()) {
-            int current = queue.poll();
+            int current = queue.poll(); // Returns the element at the head of the queue (the first one inserted) and removes it from the queue
 
             for (int neighbor : graph.getAdj(current)) {
                 if (!explored.contains(neighbor)) {

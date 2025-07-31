@@ -5,8 +5,8 @@
 import java.util.*;
 
 public class BFSShortestPaths extends GraphSearchAlgorithm {
-    private final Map<Integer, Integer> distance = new HashMap<>();
-    private final Map<Integer, Integer> parent = new HashMap<>();
+    private final Map<Integer, Integer> distance = new HashMap<>(); // Maps each node with the distance to the initial node (i.e., the minimum number of arcs to reach it).
+    private final Map<Integer, Integer> parent = new HashMap<>(); // Maps each node to its “parent” in the minimum path. It is used to reconstruct the path from a node to the initial node.
 
     public BFSShortestPaths() {
         super("BFSShortestPaths");
