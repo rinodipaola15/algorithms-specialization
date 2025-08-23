@@ -19,56 +19,20 @@ Each folder contains algorithms grouped by category, following the structure of 
 ```
 java/
 ├── algorithms/
-│ ├── divide_and_conquer/
-│ │ ├── sorting/
-│ │ │ ├── MergeSort.java
-│ │ │ ├── QuickSort.java
-│ │ │ └── MainSorting.java
-│ │ ├── sorting_and_inversion_count/
-│ │ │ ├── MergeSortAndCount.java
-│ │ │ ├── MainSortingAndInversionCount.java
-│ │ │ └── MainSortingAndInversionCountFromFile.java
-│ │ ├── sorting_and_comparison_count/
-│ │ │ ├── QuickSortCounter.java
-│ │ │ └── QuickSortCounterMain.java
-│ │ ├── integer_multiplication/
-│ │ │ ├── Karatsuba.java
-│ │ │ └── MainIntegerMultiplication.java
-│ │ ├── selection/
-│ │ │ ├── RandomizedSelection.java
-│ │ │ └── MainSelection.java
-│ ├── graph_algorithms/
-│ │ ├── min_cut/
-│ │ │ ├── RandomizedContraction.java
-│ │ │ └── MainMinCut.java
-│ │ ├── search/
-│ │ │ ├── BFS.java
-│ │ │ ├── BFSConnectedComponents.java
-│ │ │ ├── BFSShortestPaths.java
-│ │ │ ├── DFS.java
-│ │ │ ├── DFSTopologicalSort.java
-│ │ │ ├── DFSSCC.java
-│ │ │ ├── Graph.java
-│ │ │ ├── GraphSearchAlgorithm.java
-│ │ │ ├── GraphSearchAlgorithmFactory.java
-│ │ │ └── MainSearch.java
-│ │ │ └── dijkstra/
-│ │ │ ├── DijkstraStandard.java
-│ │ │ ├── DijkstraHeap.java
-│ │ │ ├── Edge.java
-│ │ │ ├── GraphWeighted.java
-│ │ │ ├── GraphWeightedSearchAlgorithm.java
-│ │ │ └── MainSearchFromFile.java
+│   ├── divide_and_conquer/
+│   │   ├── sorting/
+│   │   ├── sorting_and_inversion_count/
+│   │   ├── sorting_and_comparison_count/
+│   │   ├── integer_multiplication/
+│   │   └── selection/
+│   ├── graph_algorithms/
+│   │   ├── min_cut/
+│   │   ├── search/
+│   │   │   └── dijkstra/
 ├── data_structures/
-│ ├── heap/
-│ │ ├── MinHeap.java
-│ │ └── MainHeap.java
-│ └── trees/
-│     ├── BinarySearchTree.java
-│     ├── RedBlackTree.java
-│     └── MainTree.java
+│   ├── heap/
+│   └── tree/
 ```
-
 
 - Each folder contains algorithm implementations and a dedicated `Main` class for running tests.
 
@@ -132,7 +96,7 @@ Open the repository folder in **Visual Studio Code** and:
 #### 🔼 Heap
 - Implementation of a MinHeap data structure
 
-#### 🌳 Trees
+#### 🌳 Tree
 - BinarySearchTree: standard BST operations (insert, search, in-order traversal)
 - RedBlackTree: self-balancing BST with rotations and recoloring
 
