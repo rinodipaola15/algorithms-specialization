@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class QuickSortCounterMain {
-    private static final String INPUT_FILE_PATH = "./java/divide_and_conquer/sorting_and_comparison_count/QuickSort.txt";
+    private static final String INPUT_FILE_PATH = "./java/algorithms/divide_and_conquer/sorting_and_comparison_count/QuickSort.txt";
 
     public static void main(String[] args) {
         int[] inputArray = readArrayFromFile(INPUT_FILE_PATH);

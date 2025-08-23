@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class MainSortingAndInversionCountFromFile {
     private static final String SORTING_AND_INVERSION_COUNT_ALGORITHM = "MergeSortAndCount";
-    private static final String INPUT_FILE_PATH = "./java/divide_and_conquer/sorting_and_inversion_count/array.txt";
+    private static final String INPUT_FILE_PATH = "./java/algorithms/divide_and_conquer/sorting_and_inversion_count/array.txt";
 
     public static void main(String[] args) {
         // Read the array from the input file

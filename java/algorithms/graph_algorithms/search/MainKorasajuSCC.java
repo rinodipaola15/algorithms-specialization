@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
  */
 public class MainKorasajuSCC {
     public static void main(String[] args) {
-        String filename = "./java/graph_algorithms/search/SCC.txt"; // assicurati che sia nella root del progetto
+        String filename = "./java/algorithms/graph_algorithms/search/SCC.txt"; // assicurati che sia nella root del progetto
 
         DirectedGraph graph = new DirectedGraph();
 

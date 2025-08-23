@@ -7,7 +7,7 @@ import java.io.*;
 public class MainSearchFromFile {
     public static void main(String[] args) throws IOException {
         GraphWeighted graph = new GraphWeighted();
-        String filename = "./java/graph_algorithms/search/dijkstra/dijkstraData.txt"; // graph file
+        String filename = "./java/algorithms/graph_algorithms/search/dijkstra/dijkstraData.txt"; // graph file
         BufferedReader br = new BufferedReader(new FileReader(filename));
         String line;
 
@@ -26,8 +26,8 @@ public class MainSearchFromFile {
         int source = 1;
         int[] targets = {7,37,59,82,99,115,133,165,188,197};
 
-        // Choose algorithm: base version or heap
-        // GraphWeightedSearchAlgorithm algorithm = new DijkstraStandard();
+        // Choose algorithm: naive implementation or heap
+        // GraphWeightedSearchAlgorithm algorithm = new DijkstraNaive();
         GraphWeightedSearchAlgorithm algorithm = new DijkstraHeap();
         algorithm.run(graph, source);
 

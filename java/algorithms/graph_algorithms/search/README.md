@@ -32,7 +32,7 @@ This folder contains implementations of fundamental graph search algorithms, inc
   2. DFS on original graph in decreasing order of finishing times to discover SCCs.
 - **Use case:** Identifying clusters of nodes mutually reachable in directed graphs.
 
-### Dijkstra Standard
+### Dijkstra Naive
 - **Description:** Classic Dijkstra's algorithm using linear search to find the node with the minimum distance.
 - **How it works:** Iteratively selects the unvisited node with the smallest known distance, then relaxes its neighbors.
 - **Time Complexity:** O(V²)

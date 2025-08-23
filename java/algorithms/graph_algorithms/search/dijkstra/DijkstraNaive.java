@@ -1,14 +1,14 @@
 import java.util.*;
 
-public class DijkstraStandard extends GraphWeightedSearchAlgorithm {
+public class DijkstraNaive extends GraphWeightedSearchAlgorithm {
     // Stores the shortest known distance from the source to each node
     private final Map<Integer, Integer> dist = new HashMap<>();
     
     // Stores the parent of each node in the shortest path tree
     private final Map<Integer, Integer> parent = new HashMap<>();
 
-    public DijkstraStandard() {
-        super("DijkstraStandard");
+    public DijkstraNaive() {
+        super("DijkstraNaive");
     }
 
     @Override
