@@ -104,7 +104,7 @@ Open the repository folder in **Visual Studio Code** and:
 ### 🗃️ Hash Table
 - **Hash Table**: stores key-value pairs using a hash function to map keys to indices in an underlying array. Supports fast `insert`, `remove`, and `lookup` operations (average-case O(1)).
 - Ideal for scenarios requiring **quick access or membership checks**. Collisions are handled via chaining or open addressing.
-- **Bloom Filters**: probabilistic data structure for set membership checks with very low memory usage. Can return false positives but never false negatives.
+- **Bloom Filter**: probabilistic data structure for set membership checks with very low memory usage. Can return false positives but never false negatives.
 
 ---
 
