@@ -25,7 +25,7 @@ This folder contains Java examples and explanations using **Hash Tables**, which
 - Performance can degrade if the **hash function is poor** or the table becomes too full.  
 - Not suitable when **order of elements** matters.  
 
-### Bloom Filters
+### Bloom Filter
 
 - A **Bloom Filter** is a **probabilistic data structure** for set membership tests.  
 - Supports extremely fast **insertions and queries** with **very low memory usage**, but:
