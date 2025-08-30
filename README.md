@@ -31,7 +31,8 @@ java/
 │   │   │   └── dijkstra/
 ├── data_structures/
 │   ├── heap/
-│   └── tree/
+│   ├── tree/
+│   └── hash_table/
 ```
 
 - Each folder contains algorithm implementations and a dedicated `Main` class for running tests.
@@ -99,6 +100,11 @@ Open the repository folder in **Visual Studio Code** and:
 #### 🌳 Tree
 - BinarySearchTree: standard BST operations (insert, search, in-order traversal)
 - RedBlackTree: self-balancing BST with rotations and recoloring
+
+### 🗃️ Hash Table
+- **Hash Table**: stores key-value pairs using a hash function to map keys to indices in an underlying array. Supports fast `insert`, `remove`, and `lookup` operations (average-case O(1)).
+- Ideal for scenarios requiring **quick access or membership checks**. Collisions are handled via chaining or open addressing.
+- **Bloom Filters**: probabilistic data structure for set membership checks with very low memory usage. Can return false positives but never false negatives.
 
 ---
 
